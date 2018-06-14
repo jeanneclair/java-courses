@@ -6,18 +6,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 public class CourseController {
 	
-//	@RequestMapping("/courses")
-//	public String courses(@RequestParam(name="name", required=false, defaultValue="Jeanne") String name, Model model) {
-//		model.addAttribute("name", name);
-//		return "courses";
-//	}
+
 	
 	@Autowired
-	CourseRepository courseRepo;
+	CourseRepository courses;
 
 	@RequestMapping("/courses")
-	public String getCourses() {
-//		model.addAttribute("courses", courseRepo.getAllCourses());
+	public String getCourses(Model model) {
+		model.addAttribute("courses", courses.getCourses());
 		return "courses";
 	}
 	

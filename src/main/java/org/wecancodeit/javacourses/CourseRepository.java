@@ -1,9 +1,11 @@
 package org.wecancodeit.javacourses;
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class CourseRepository {
 	
 	private Map<String, Course> courses = new HashMap<String, Course>();

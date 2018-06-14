@@ -11,14 +11,14 @@ public class CourseRepositoryTest {
 	
 	Course testCourse = new Course("spring", "Spring Framework", "Spring Frameword Description");
 	
-	@Test //passed
+	@Test 
 	public void addCourseShouldPassWhenAddedToMap() {
 		
 		int sizeBeforeNewCourse = courseRepo.getCourses().size();
 		courseRepo.addCourse(testCourse);
 		int sizeAfterNewCourse = courseRepo.getCourses().size();
 		
-		assertThat(sizeAfterNewCourse, equalTo(sizeBeforeNewCourse));
+		assertThat(sizeAfterNewCourse, equalTo(sizeBeforeNewCourse + 1));
 	}
 
 }
